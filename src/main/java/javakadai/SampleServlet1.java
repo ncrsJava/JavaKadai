@@ -33,7 +33,7 @@ public class SampleServlet1 extends HttpServlet {
 		int i =0;
 		//上限値
 		int l =11;
-		String message = "変数iの上限は"+Integer.toString(l)+"とします。";
+		String message = "変数iの上限は"+Integer.toString(l-1)+"とします。";
 		// 保持させる箱
 		StringBuilder sb = new StringBuilder();
 		
@@ -49,7 +49,7 @@ public class SampleServlet1 extends HttpServlet {
 		//【JSP→Servlet→JSPの形式】
 		// リクエストにデータを追加する
 		request.setAttribute("message", message);
-		request.setAttribute("sb", sb);
+		request.setAttribute("sb", sb.toString());
 		// result.jspへ転送
 		request.getRequestDispatcher("/showint.jsp").forward(request, response);
 	}

@@ -14,7 +14,8 @@
 String message=(String)request.getAttribute("message");
 String sb=(String)request.getAttribute("sb");
 %>
+
 <h1><%=message%></h1>
-<%=sb%><br>
+上限までの表示：<%=sb%><br>
 </body>
 </html>
